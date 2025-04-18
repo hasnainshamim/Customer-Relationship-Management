@@ -1,6 +1,7 @@
 import React from 'react'
 import Sidebar from '../components/Sidebar'
 import Navbar from '../components/Navbar'
+import { MainLayout } from '../RouteConfig/LayouteRoutes/MainRoutes'
 
 const Layout = () => {
     return (
@@ -22,7 +23,7 @@ const Layout = () => {
                 {/* Dashboard Area */}
                 <main className="flex-1 overflow-y-auto p-4 z-10 border">
                     {/* Page Content */}
-                   
+                   <MainLayout/>
                 </main>
             </div>
         </div>

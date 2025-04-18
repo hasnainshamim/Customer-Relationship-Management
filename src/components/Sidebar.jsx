@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Sidebar = () => {
+
+  const [menu, setmenu] = useState(["contact", "companies", "deals", "lists", "Inbox", "calls", "tasks", "invoices", "Payment"])
+
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      
+
       <div className="drawer-side">
         <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-        
+
         <div className="menu bg-white text-base-content min-h-full w-64 p-4 border-r border-gray-200 flex flex-col">
           {/* Logo Section */}
           <div className='mb-8 px-2 py-4'>
             <h1 className='font-bold text-2xl text-indigo-600'>PlanetCRM</h1>
           </div>
-          
+
           {/* Main Navigation */}
           <nav className="flex-1 flex flex-col">
             <div className="mb-6">
@@ -37,31 +40,28 @@ const Sidebar = () => {
                 </li>
               </ul>
             </div>
-            
+
             {/* Secondary Navigation */}
             <div className="mb-6">
               <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-2 mb-3">TOOLS</h3>
               <ul className="space-y-1">
-                <li>
-                  <a className="flex items-center px-3 py-2 rounded-md hover:bg-gray-100">
-                    <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                    </svg>
-                    Deals
-                  </a>
-                </li>
-                <li>
-                  <a className="flex items-center px-3 py-2 rounded-md hover:bg-gray-100">
-                    <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    Calendar
-                  </a>
-                </li>
+                {menu && menu.map((val, ind) => {
+                  return <li key={ind}>
+
+                      <a className="flex items-center px-3 py-2 rounded-md hover:bg-gray-100">
+                        <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                        {val}
+                      </a>
+
+                   
+                  </li>
+                })}
               </ul>
             </div>
           </nav>
-          
+
           {/* Bottom User Section */}
           <div className="mt-auto pt-4 border-t border-gray-200">
             <div className="flex items-center px-2 py-3 hover:bg-gray-100 rounded-md cursor-pointer">

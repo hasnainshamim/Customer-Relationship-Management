@@ -1,10 +1,10 @@
 import React from 'react'
-import { MainLayout } from './RouteConfig/LayouteRoutes/MainRoutes'
+import Layout from './screens/Layout'
 
 const App = () => {
   return (
     <div>
-      <MainLayout />
+      <Layout/>
     </div>
   )
 }

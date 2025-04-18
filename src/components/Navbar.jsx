@@ -1,12 +1,25 @@
 import React from 'react'
+// import { useLocation } from 'react-router-dom';
+
 
 const Navbar = () => {
+  // const location = useLocation();
+  
+  // const getTitle = () => {
+  //   switch(location.pathname) {
+  //     case '/deals': return 'Deals';
+  //     case '/contacts': return 'Contacts';
+  //     case '/layout': return 'Layout';
+  //     default: return 'Dashboard';
+  //   }
+  // };
+
   return (
     <div className="navbar bg-base-100 shadow-sm ">
   <div className="flex-1">
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    {/* <a className="btn btn-ghost text-xl">{getTitle()}</a> */}
   </div>
-  <div className="flex-none">
+  <div className="flex-none pe-5">
     <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
         <div className="indicator">
