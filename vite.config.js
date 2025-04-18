@@ -8,4 +8,8 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  base: '/', // Ensure this is set correctly
+  build: {
+    outDir: 'dist', // This is default for Vite
+  }
 })
