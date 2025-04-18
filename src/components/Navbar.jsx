@@ -1,23 +1,29 @@
 import React from 'react'
-// import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 
 const Navbar = () => {
-  // const location = useLocation();
+  const location = useLocation();
   
-  // const getTitle = () => {
-  //   switch(location.pathname) {
-  //     case '/deals': return 'Deals';
-  //     case '/contacts': return 'Contacts';
-  //     case '/layout': return 'Layout';
-  //     default: return 'Dashboard';
-  //   }
-  // };
+  const getTitle = () => {
+    switch(location.pathname) {
+      case '/companies': return 'Companies';
+      case '/contact': return 'Contacts';
+      case '/deals': return 'Deals';
+      case '/lists': return 'Lists';
+      case '/inbox': return 'Inbox';
+      case '/calls': return 'Calls';
+      case '/tasks': return 'Tasks';
+      case '/invoices': return 'Invoices';
+      case '/payment': return 'Payment';
+      default: return 'Dashboard';
+    }
+  };
 
   return (
     <div className="navbar bg-base-100 shadow-sm ">
   <div className="flex-1">
-    {/* <a className="btn btn-ghost text-xl">{getTitle()}</a> */}
+    <a className="btn btn-ghost text-xl">{getTitle()}</a>
   </div>
   <div className="flex-none pe-5">
     <div className="dropdown dropdown-end">
