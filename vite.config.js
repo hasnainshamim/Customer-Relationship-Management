@@ -8,8 +8,9 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  base: 'Customer-Relationship-Management', // Ensure this is set correctly
+  base: '/', // Ensure this is set correctly
   build: {
     outDir: 'dist', // This is default for Vite
+    emptyOutDir: true
   }
 })
